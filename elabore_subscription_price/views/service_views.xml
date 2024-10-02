@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="service_view_tree" model="ir.ui.view">
+        <field name="name">service.view.tree.elabore.subscription.price</field>
+        <field name="model">service</field>
+        <field name="inherit_id" ref="maintenance_server_data.service_view_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="category"/>
+            </field>
+        </field>
+    </record>
+</odoo>

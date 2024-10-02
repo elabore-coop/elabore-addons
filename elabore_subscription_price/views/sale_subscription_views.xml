@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="sale_subscription_tree" model="ir.ui.view">
+        <field name="name">sale.subscription.tree.elabore.subscription.price</field>
+        <field name="model">sale.subscription</field>
+        <field name="inherit_id" ref="subscription_oca.sale_subscription_tree" />
+        <field name="arch" type="xml">
+            <field name="recurring_total" position="after"> 
+                <field name="employees_number" optional="show"/>
+                <field name="installed_softwares" widget='many2many_tags' optional="show"/>
+                <field name="backup_size" optional="show"/>
+                <field name="mo_price" optional="show"/>
+            </field>
+        </field>
+    </record>
+</odoo>
