@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Template /my/home -->
+    <template id="portal_my_home_elabore_subscription_price" name="Portal My Home: elabore_subscription_price" inherit_id="portal.portal_layout" priority="40">
+        <xpath expr="//div[hasclass('o_portal_my_details')]" position="inside">
+            <hr class="mt-1 mb-0"/>
+            <div>
+                Nombre d'employés : 
+                <b><t t-esc="user_id.partner_id.employees_number" t-options="{'widget': 'integer'}"/></b>
+            </div>
+            <hr class="mt-1 mb-0"/>
+            <div>
+                Outils installés : 
+                <b><t t-esc="', '.join([service.name for service in user_id.partner_id.installed_softwares])" /></b>
+            </div>
+            <hr class="mt-1 mb-0"/>
+            <div>
+                Taille de la sauvegarde : 
+                <b><t t-esc="user_id.partner_id.backup_size" /> Go</b>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Template /my/account -->
+    <template id="portal_my_details_elabore_subscription_price" name="Portal My details: elabore_subscription_price" inherit_id="portal.portal_my_details">
+        <xpath expr="//input[@name='redirect']" position="before">
+            <div t-attf-class="form-group #{error.get('employees_number') and 'o_has_error' or ''} col-xl-6">
+                <label class="col-form-label" for="employees_number">Nombre d'employés</label>
+                <p><small>Nombre réel d'employés (temps partiels compris)</small></p>
+                <input 
+                    type="text" 
+                    name="employees_number" 
+                    t-attf-class="form-control #{error.get('employees_number') and 'is-invalid' or ''}" 
+                    t-att-value="employees_number or user_id.partner_id.employees_number" 
+            
+                    />
+            </div>
+        </xpath>
+    </template>
+</odoo>

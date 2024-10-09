@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_equipment_portal_user,equipment_portal_user,maintenance.model_maintenance_equipment,base.group_portal,1,0,0,0
+service_instance_portal_user,service_instance_portal_user,maintenance_server_data.model_service_instance,base.group_portal,1,0,0,0
+service_portal_user,service_portal_user,maintenance_server_data.model_service,base.group_portal,1,0,0,0

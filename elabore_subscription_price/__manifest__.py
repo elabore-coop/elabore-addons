@@ -15,7 +15,7 @@
         "base",
         "subscription_oca", 
         "maintenance_server_data",
-        "maintenance_project"
+        "maintenance_project"        
     ],
     "qweb": [],
     "external_dependencies": {
@@ -23,11 +23,11 @@
     },
     # always loaded
     "data": [
-        # "security/security.xml",
+        "security/ir.model.access.csv",
         "views/res_partner_views.xml",
         "views/sale_subscription_views.xml",       
         "views/service_views.xml",       
-        # "data/data.xml",
+        "views/portal_my_home_template.xml",       
     ],
     # only loaded in demonstration mode
     "demo": [],
