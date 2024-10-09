@@ -3,7 +3,7 @@
 
 {
     "name": "elabore_subscription_price",
-    "version": "14.0.1.0.0",
+    "version": "16.0.1.0.0",
     "author": "Elabore",
     "website": "https://elabore.coop",
     "maintainer": "Elabore",
@@ -23,11 +23,9 @@
     },
     # always loaded
     "data": [
-        # "security/security.xml",
         "views/res_partner_views.xml",
         "views/sale_subscription_views.xml",       
         "views/service_views.xml",       
-        # "data/data.xml",
     ],
     # only loaded in demonstration mode
     "demo": [],
